@@ -1,0 +1,137 @@
+
+
+body,
+#root {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--sidebar-main-bg);
+  color: #111827;
+}
+
+
+.layout-shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* --- Sidebar Styles --- */
+.sidebar {
+  background-color: var(--sidebar-bg);
+  color: var(--sidebar-text);
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0; /* Prevents sidebar from shrinking */
+}
+
+.sidebar-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  min-height: 40px;
+}
+
+.sidebar-header > *:only-child {
+  margin: auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--sidebar-text-hover);
+}
+
+.toggle-button {
+  background: transparent;
+  border: 1px solid var(--sidebar-border-color);
+  color: var(--sidebar-text);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.toggle-button:hover {
+  color: var(--sidebar-text-hover);
+  background-color: var(--sidebar-hover-bg);
+}
+
+/* --- Navigation Menu Styles --- */
+.nav-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nav-menu li .nav-button {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  color: var(--sidebar-text);
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  white-space: nowrap;
+  border-radius: var(--border-radius);
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.nav-menu li .nav-button:hover {
+  background-color: var(--sidebar-hover-bg);
+  color: var(--sidebar-text-hover);
+}
+
+.nav-icon {
+  font-size: 1.25rem;
+  min-width: 24px; /* Ensures alignment */
+  display: flex;
+  justify-content: center;
+}
+
+.nav-text {
+  font-weight: 900;
+}
+
+/* --- Main Container Styles --- */
+.main-container {
+  flex-grow: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.main-header {
+  display: none; /* Hidden by default, shown on mobile */
+}
+
+/* Ensure sidebar is always visible */
+.sidebar {
+  position: relative;
+  z-index: 10;
+}
+
+/* Adjust main container padding for all screen sizes */
+.main-container {
+  padding: 1rem;
+}
