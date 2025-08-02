@@ -12,12 +12,13 @@ import {
 } from "react-icons/fa";
 import "./Homepage.css";
 import { select } from "motion/react-client";
-import { NavLink } from "react-router";
 
 export default function Homepage() {
   return (
     <>
-      <Layout></Layout>
+      <Layout>
+        
+      </Layout>
     </>
   );
 }
@@ -80,12 +81,7 @@ const Layout = ({ children }) => {
   );
 };
 
-const SidebarContent = ({
-  onToggle,
-  isCollapsed,
-  selectedItem,
-  setSelectedItem,
-}) => {
+const SidebarContent = ({ onToggle, isCollapsed, selectedItem, setSelectedItem }) => {
   return (
     <div className="sidebar-inner">
       <div className="sidebar-header">
@@ -112,23 +108,13 @@ const SidebarContent = ({
         <ul>
           {navItems.map((item) => (
             <li key={item.name}>
-              <NavLink
-                to={`/${item.name.toLowerCase()}`}
-                className={({ isActive }) =>
-                  isActive ? "nav-button active" : "nav-button"
-                }
+              <button
+                className="nav-button"
                 onClick={() => setSelectedItem(item.name)}
               >
-                <button
-                  className="nav-button"
-                  onClick={() => setSelectedItem(item.name)}
-                >
-                  <div className="nav-icon">{item.icon}</div>
-                  {!isCollapsed && (
-                    <span className="nav-text">{item.name}</span>
-                  )}
-                </button>
-              </NavLink>
+                <div className="nav-icon">{item.icon}</div>
+                {!isCollapsed && <span className="nav-text">{item.name}</span>}
+              </button>
             </li>
           ))}
         </ul>
