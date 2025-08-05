@@ -3,26 +3,39 @@
   --border-radius: 5px;
 
   /* Color palette */
-  --primary: #09bbec;
-  --secondary: #64748b;
-  --accent: #8b5cf6;
+  --primary: #3bb09e;
+  --secondary: #889fbe;
+  --accent: #202354af;
   --success: #22c55e;
   --warning: #f59e0b;
   --danger: #ef4444;
+  --background: #1b1c1d;
+
 
   /* Sidebar */
 
-  --sidebar-bg: #108498;
-  --sidebar-text: #d1d5db;
-  --sidebar-text-hover: #f9fafb;
-  --sidebar-hover-bg: #1f2937;
+  --sidebar-bg: #282a2c;
+  --sidebar-text: #f9fafb;
+  --sidebar-hover-bg: #1f6e89;
   --sidebar-main-bg: #f3f4f6;
-  --sidebar-border-color: #374151;
+  --sidebar-border-color: #3bb09e;
+
+  /* gradient colors */
+  --gradient-color-1: #ff6ec4;
+  --gradient-color-2: #7873f5;
+  --gradient-color-3: #4ade80;
+  --gradient-color-4: #22d3ee;
+  --gradient-color-5: #facc15;
+
+  /* Text colors */
+  --text-primary: #f9fafb;
+  --text-secondary: #9ca3af;
 }
 
 * {
   font-family: "Manrope", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
+  font-size: 16px;
   font-style: normal;
 }

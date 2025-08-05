@@ -1,5 +1,11 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import Education from "../Education/Education";
+import Experience from "../Experience/Experience";
+import Skills from "../Skills/Skills";
+import Contact from "../Contact/Contact";
+import Achievements from "../Achievements/Achievements";
+import Introduction from "../Introduction/Introduction";
 import {
   FaChevronLeft,
   FaUser,
@@ -11,18 +17,47 @@ import {
   FaChevronRight,
 } from "react-icons/fa";
 import "./Homepage.css";
-import { select } from "motion/react-client";
-
+import { Navigate, Route, Routes, useNavigate } from "react-router";
+//get the selectedItem and write that as h1
 export default function Homepage() {
+  //check the current path and set the selectedItem accordingly
+
+  let navigate = useNavigate();
+  const [selectedItem, setSelectedItem] = useState("Introduction");
+  React.useEffect(() => {
+    const path = window.location.pathname;
+    if (path === "/") {
+      setSelectedItem("Introduction");
+    } else {
+      const item = path.slice(1); // remove leading '/'
+      const capitalizedItem =
+        item.charAt(0).toUpperCase() + item.slice(1).toLowerCase();
+      const validItems = navItems.map((nav) => nav.name.toLowerCase());
+      if (validItems.includes(item.toLowerCase())) {
+        setSelectedItem(capitalizedItem);
+      } else {
+        // If path is invalid, redirect to homepage
+        navigate("/");
+      }
+    }
+  }, [navigate]);
+
   return (
     <>
-      <Layout>
-        
+      <Layout selectedItem={selectedItem} setSelectedItem={setSelectedItem}>
+        {/* add a react router to route */}
+        <Routes>
+          <Route path="/" element={<Introduction />} />
+          <Route path="/education" element={<Education />} />
+          <Route path="/experience" element={<Experience />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/achievements" element={<Achievements />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
       </Layout>
     </>
   );
 }
-
 const navItems = [
   { name: "Introduction", icon: <FaUser /> },
   { name: "Education", icon: <FaGraduationCap /> },
@@ -32,10 +67,9 @@ const navItems = [
   { name: "Contact", icon: <FaEnvelope /> },
 ];
 
-const Layout = ({ children }) => {
+const Layout = ({ children, selectedItem, setSelectedItem }) => {
   const [isCollapsed, setCollapsed] = useState(window.innerWidth <= 992);
   const [userCollapsed, setUserCollapsed] = useState(false);
-  const [selectedItem, setSelectedItem] = useState("Introduction");
 
   // Handle window resize
   React.useEffect(() => {
@@ -75,26 +109,43 @@ const Layout = ({ children }) => {
       </motion.aside>
 
       <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
-        <main className="main-container">{children}</main>
+        <main className="main-container main-page-container">{children}</main>
       </div>
     </div>
   );
 };
 
-const SidebarContent = ({ onToggle, isCollapsed, selectedItem, setSelectedItem }) => {
+const SidebarContent = ({
+  onToggle,
+  isCollapsed,
+  selectedItem,
+  setSelectedItem,
+}) => {
+  let navigate = useNavigate();
+  const clickedNavItem = (name) => {
+    //route to the page
+    // use react router to route to the page using js
+    setSelectedItem(name);
+    navigate(`/${name === "Introduction" ? "" : name.toLowerCase()}`);
+  };
+
   return (
-    <div className="sidebar-inner">
-      <div className="sidebar-header">
-        {!isCollapsed && (
-          <motion.div
-            className="logo"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          >
-            <span>Dipam</span>
-          </motion.div>
-        )}
+    // animate from left on startup
+    <motion.div
+      className="sidebar-inner"
+      initial={{ x: -100 }}
+      animate={{ x: 0 }}
+    >
+      <div className={`sidebar-header ${isCollapsed ? "flex-col" : ""}`}>
+        <motion.div
+          className="logo"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        >
+          <span>Dipam</span>
+        </motion.div>
+
         <motion.div
           className="toggle-button"
           whileHover={{ scale: 1.1 }}
@@ -107,10 +158,15 @@ const SidebarContent = ({ onToggle, isCollapsed, selectedItem, setSelectedItem }
       <nav className="nav-menu">
         <ul>
           {navItems.map((item) => (
-            <li key={item.name}>
+            <li
+              key={item.name}
+              className={`nav-item ${
+                selectedItem === item.name ? "active" : ""
+              }`}
+            >
               <button
                 className="nav-button"
-                onClick={() => setSelectedItem(item.name)}
+                onClick={() => clickedNavItem(item.name)}
               >
                 <div className="nav-icon">{item.icon}</div>
                 {!isCollapsed && <span className="nav-text">{item.name}</span>}
@@ -119,6 +175,6 @@ const SidebarContent = ({ onToggle, isCollapsed, selectedItem, setSelectedItem }
           ))}
         </ul>
       </nav>
-    </div>
+    </motion.div>
   );
 };

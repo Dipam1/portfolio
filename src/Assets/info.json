@@ -1,0 +1,160 @@
+{
+    "personalInfo": {
+        "name": "Dipam Poudel",
+        "title": "Software Engineer",
+        "location": "Queens, NY, 11377",
+        "phone": "9296220922",
+        "email": "dipampoudel1998@gmail.com",
+        "linkedin": "in/dipam-poudel"
+    },
+    "professionalSummary": "Versatile Front-End Developer with 3+ years of experience building and optimizing scalable web applications across healthcare, e-commerce, and enterprise platforms. Proficient in ReactJS, JavaScript, TypeScript, and Redux, with a strong focus on creating responsive, accessible, and user-centric interfaces. I am skilled in modern UI frameworks like Material UI, Ant Design, and Bootstrap, and experienced back-end integration using Node.js, ExpressJS, and RESTful APIs. Adept in DevOps tools such as Docker, Git, and Heroku, with hands-on experience deploying applications via AWS and managing CI/CD workflows. Strong background in working with SQL and NoSQL databases, including MongoDB, Firebase, and SQL Server, with proven ability to design secure, scalable data flows. Passionate about clean code, agile collaboration, and continuously evolving with technologies like Next.js and Tailwind CSS to deliver high-performing, maintainable products.",
+    "experience": [
+        {
+            "company": "Nimble Clinical Research",
+            "location": "New Jersey (Remote)",
+            "title": "Software Developer",
+            "startDate": "Jan 2022",
+            "endDate": "Jan 2023",
+            "responsibilities": [
+                "Redesigned and optimized the Nimble Clinical application using ReactJS and Redux, resulting in a 400ms reduction in system load time.",
+                "Enhanced team productivity by streamlining task coordination and integrating Zoho APIs for workflow automation.",
+                "Developed and customized responsive Shopify themes using Liquid, HTML, and CSS, aligning with branding and performance standards.",
+                "Implemented data visualizations and interactive UI components using Material UI, Bootstrap, GraphQL, and REST APIs to improve user engagement."
+            ],
+            "technologies": [
+                "ReactJS",
+                "Redux",
+                "JavaScript",
+                "Liquid",
+                "Zoho API",
+                "GraphQL",
+                "REST APIs",
+                "Material UI",
+                "Bootstrap"
+            ]
+        },
+        {
+            "company": "Pegotec Pte. Ltd",
+            "location": "Singapore City",
+            "title": "Web Developer",
+            "startDate": "Dec 2020",
+            "endDate": "Jan 2022",
+            "responsibilities": [
+                "Built and deployed 5+ commercial-grade websites using React, Redux, Node.js, and MongoDB, emphasizing performance and maintainability.",
+                "Modernized and maintained legacy systems with ReactJS class components, ensuring system compatibility and long-term support.",
+                "Developed interactive admin dashboards featuring real-time map updates and live data streams for dynamic client monitoring.",
+                "Led Docker-based deployments and managed AWS environments, ensuring seamless CI/CD and uptime.",
+                "Boosted query performance by 25% through integration of SQL Server and query optimization techniques."
+            ],
+            "technologies": [
+                "ReactJS",
+                "Redux",
+                "Node.js",
+                "MongoDB",
+                "SQL Server",
+                "AWS",
+                "Docker",
+                "Ant Design"
+            ]
+        },
+        {
+            "company": "PrismaSofts",
+            "location": "Kathmandu, Nepal",
+            "title": "Full Stack Developer",
+            "startDate": "Dec 2019",
+            "endDate": "Nov 2020",
+            "responsibilities": [
+                "Built dynamic web apps with ReactJS, Node.js, and Firebase, including custom REST APIs and user authentication systems.",
+                "Designed flexible WordPress sites with PHP-backed dashboards for easy content management.",
+                "Managed Git-based project workflows, resolving merge conflicts and supporting multi-branch collaboration.",
+                "Created optimized SQL schemas and streamlined database operations, increasing data retrieval performance by 30%."
+            ],
+            "technologies": [
+                "ReactJS",
+                "Node.js",
+                "Firebase",
+                "WordPress",
+                "PHP",
+                "SQL",
+                "Git"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "university": "Monroe University",
+            "location": "New York",
+            "graduationDate": "Aug 2024",
+            "degree": "Masters in Computer Science",
+            "gpa": "3.92"
+        },
+        {
+            "university": "Tribhuvan University",
+            "location": "Kathmandu",
+            "graduationDate": "Oct 2020",
+            "degree": "Bachelors in Computer Science",
+            "percentage": "73%"
+        }
+    ],
+    "certifications": [
+        {
+            "name": "Object-Oriented Programming with Java – Part 1",
+            "issuer": "University of Helsinki",
+            "date": "September 12, 2019"
+        },
+        {
+            "name": "Object-Oriented Programming with Java – Part 2",
+            "issuer": "University of Helsinki",
+            "date": "October 17, 2019"
+        }
+    ],
+    "projects": [
+        {
+            "name": "Lodgenest",
+            "url": "https://lodgenest.netlify.app/",
+            "description": [
+                "Developed a web-based property management platform for seamless apartment search and bookings (ReactJS, TypeScript, NodeJS, AntDesign, Axios).",
+                "Built secure user authentication and role-based access control.",
+                "Implemented a real-time messaging system, and designed database schemas and use cases."
+            ]
+        }
+    ],
+    "skills": {
+        "frontEnd": [
+            "ReactJS",
+            "JavaScript",
+            "TypeScript",
+            "Redux",
+            "HTML5",
+            "CSS3",
+            "Material UI",
+            "Ant Design",
+            "Bootstrap"
+        ],
+        "backEnd": [
+            "Node.js",
+            "ExpressJS",
+            "REST APIs",
+            "Firebase",
+            "MongoDB",
+            "SQL",
+            "GraphQL"
+        ],
+        "devOpsAndTools": [
+            "Git (GitHub, GitLab)",
+            "Docker",
+            "Heroku",
+            "AWS",
+            "Zoho",
+            "Shopify",
+            "Jira"
+        ],
+        "other": [
+            "UI/UX Design (Figma)",
+            "WordPress",
+            "Liquid",
+            "CI/CD pipelines",
+            "Agile/Scrum"
+        ]
+    }
+}
