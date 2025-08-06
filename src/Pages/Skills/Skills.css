@@ -1,2 +1,11 @@
+.skills-page {
+    background-color: var(--background);
+    min-height: 100vh;
+}
+
 .skills-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 1rem;
 }

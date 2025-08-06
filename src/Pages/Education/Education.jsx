@@ -27,7 +27,7 @@ const Education = () => {
         initial="hidden"
         animate="visible"
       >
-        <motion.h1 className="education-header" variants={itemVariants}>
+        <motion.h1 className="page-header" variants={itemVariants}>
           Education
         </motion.h1>
         <div className="education-timeline">

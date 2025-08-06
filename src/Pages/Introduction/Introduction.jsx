@@ -43,7 +43,7 @@ export default function App() {
             <div className="introduction-page">
                 <div className="container">
                     <motion.header 
-                        className="intro-header"
+                        className="page-header"
                         variants={containerVariants}
                         initial="hidden"
                         animate="visible"

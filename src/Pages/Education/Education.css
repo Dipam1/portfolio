@@ -15,16 +15,7 @@
     margin: 0 auto;
 }
 
-.education-header {
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: var(--text-primary);
-    margin-bottom: 3rem;
-    border-bottom: 2px solid var(--primary);
-    padding-bottom: 0.5rem;
-    display: inline-block; /* To make border only as wide as text */
-}
+
 
 .education-timeline {
     position: relative;

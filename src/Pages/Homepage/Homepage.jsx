@@ -127,6 +127,8 @@ const SidebarContent = ({
     // use react router to route to the page using js
     setSelectedItem(name);
     navigate(`/${name === "Introduction" ? "" : name.toLowerCase()}`);
+    //scroll to top smoothly
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (

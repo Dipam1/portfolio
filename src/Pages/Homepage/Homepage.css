@@ -1,12 +1,3 @@
-body,
-#root {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
-  background-color: var(--sidebar-main-bg);
-  color: #111827;
-}
-
 .layout-shell {
   display: flex;
   min-height: 100vh;
@@ -23,6 +14,7 @@ body,
 }
 
 .sidebar-inner {
+  position: fixed;
   display: flex;
   flex-direction: column;
   height: 100%;
