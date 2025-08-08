@@ -84,13 +84,13 @@ const Layout = ({ children, selectedItem, setSelectedItem }) => {
   }, [userCollapsed]);
 
   const sidebarVariants = {
-    expanded: { width: 260 },
+    expanded: { width: 238 },
     collapsed: { width: 88 },
   };
 
   return (
     <div className="layout-shell">
-      <motion.aside
+      <motion.div
         className="sidebar"
         initial={false}
         animate={isCollapsed ? "collapsed" : "expanded"}
@@ -106,7 +106,7 @@ const Layout = ({ children, selectedItem, setSelectedItem }) => {
           selectedItem={selectedItem}
           setSelectedItem={setSelectedItem}
         />
-      </motion.aside>
+      </motion.div>
 
       <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
         <main className="main-container main-page-container">{children}</main>
