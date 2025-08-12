@@ -82,32 +82,19 @@
   color: var(----text-secondary);
 }
 
-/* add keyframes for a shake animation */
-@keyframes shake {
-  0% {
-    transform: translateX(0);
-  }
-  20% {
-    transform: translateX(-5px);
-  }
-  40% {
-    transform: translateX(5px);
-  }
-  60% {
-    transform: translateX(-5px);
-  }
-  80% {
-    transform: translateX(5px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
 .nav-menu li .nav-button:active {
   background-color: var(--sidebar-hover-bg);
-  animation: shake 0.2s;
+  animation: grow-and-shrink 0.2s ease-in-out;
 }
+
+  @keyframes grow-and-shrink {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
 
 .nav-menu li .nav-button {
   display: flex;
@@ -128,24 +115,8 @@
 }
 
 .nav-menu li .nav-button:hover {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
+  background-color: var(--secondary);
 
-  /* * MODIFIED: SVG path data was changed to make the lines ~3x longer.
-             * The viewBox and container size were increased to accommodate this.
-             */
-  background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg transform='rotate(-45 50 50)'%3E%3Cpath d='M55 25 L100 10' stroke='currentColor' stroke-width='4' stroke-linecap='round'/%3E%3Cpath d='M50 50 H100' stroke='currentColor' stroke-width='4' stroke-linecap='round'/%3E%3Cpath d='M55 75 L100 90' stroke='currentColor' stroke-width='4' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-size: contain;
-
-  /* Initial state: hidden and scaled down */
-  opacity: 0;
-  transform-origin: top right;
-  transform: scale(0.5);
-  transition: opacity 0.3s ease, right 0.3s ease, top 0.3s ease,
-    transform 0.3s ease;
 }
 
 .nav-icon {
