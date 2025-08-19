@@ -17,7 +17,8 @@ import {
   FaChevronRight,
 } from "react-icons/fa";
 import "./Homepage.css";
-import { Navigate, Route, Routes, useNavigate } from "react-router";
+import { Route, Routes, useNavigate } from "react-router";
+import ParticlesBG from "../../Components/ParticlesBG";
 //get the selectedItem and write that as h1
 export default function Homepage() {
   //check the current path and set the selectedItem accordingly
@@ -109,7 +110,11 @@ const Layout = ({ children, selectedItem, setSelectedItem }) => {
       </motion.div>
 
       <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
-        <main className="main-container main-page-container">{children}</main>
+        <main className="main-container main-page-container">
+          {/* implement tsparticles */}
+          <ParticlesBG />
+          {children}
+        </main>
       </div>
     </div>
   );
@@ -133,11 +138,7 @@ const SidebarContent = ({
 
   return (
     // animate from left on startup
-    <motion.div
-      className="sidebar-inner"
-      initial={{ x: -100 }}
-      animate={{ x: 0 }}
-    >
+    <motion.div className="sidebar-inner">
       <div className={`sidebar-header ${isCollapsed ? "flex-col" : ""}`}>
         <motion.div
           className="logo"

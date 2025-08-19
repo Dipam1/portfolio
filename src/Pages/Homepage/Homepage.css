@@ -87,14 +87,14 @@
   animation: grow-and-shrink 0.2s ease-in-out;
 }
 
-  @keyframes grow-and-shrink {
-    0% {
-      transform: scale(1);
-    }
-    100% {
-      transform: scale(1.1);
-    }
+@keyframes grow-and-shrink {
+  0% {
+    transform: scale(1);
   }
+  100% {
+    transform: scale(1.1);
+  }
+}
 
 .nav-menu li .nav-button {
   display: flex;
@@ -116,7 +116,6 @@
 
 .nav-menu li .nav-button:hover {
   background-color: var(--secondary);
-
 }
 
 .nav-icon {
@@ -135,9 +134,10 @@
 .main-container {
   flex-grow: 1;
   overflow-y: auto;
-  background-color: var(--main-bg);
+  background-color: var(--background);
 }
 
 .main-header {
   display: none; /* Hidden by default, shown on mobile */
 }
+

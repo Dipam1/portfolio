@@ -1,6 +1,8 @@
+
 :root {
   /* Border radius */
   --border-radius: 5px;
+
 
   /* Color palette */
   --primary: #3bb09e;
@@ -10,7 +12,6 @@
   --warning: #f59e0b;
   --danger: #ef4444;
   --background: #1b1c1d;
-
 
   /* Sidebar */
 
@@ -30,6 +31,9 @@
   /* Text colors */
   --text-primary: #f9fafb;
   --text-secondary: #9ca3af;
+
+  --modal-mask-bg: rgba(212, 189, 189, 0.5);
+
 }
 
 * {

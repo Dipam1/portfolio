@@ -1,10 +1,39 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { FaReact, FaNodeJs, FaGitAlt, FaDocker, FaWordpress, FaPhp, FaAws } from 'react-icons/fa';
-import { SiJavascript, SiTypescript, SiRedux, SiHtml5, SiCss3, SiMui, SiAntdesign, SiBootstrap, SiExpress, SiFirebase, SiMongodb, SiGraphql, SiHeroku, SiShopify, SiJira, SiFigma, SiNextdotjs, SiTailwindcss } from 'react-icons/si';
+import React, { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import {
+  FaReact,
+  FaNodeJs,
+  FaGitAlt,
+  FaDocker,
+  FaWordpress,
+  FaPhp,
+  FaAws,
+} from "react-icons/fa";
+import {
+  SiJavascript,
+  SiTypescript,
+  SiRedux,
+  SiHtml5,
+  SiCss3,
+  SiMui,
+  SiAntdesign,
+  SiBootstrap,
+  SiExpress,
+  SiFirebase,
+  SiMongodb,
+  SiGraphql,
+  SiHeroku,
+  SiShopify,
+  SiJira,
+  SiFigma,
+  SiNextdotjs,
+  SiTailwindcss,
+} from "react-icons/si";
 import { DiMysql } from "react-icons/di";
-import developerData from '../../Assets/info.json';
-import './FloatingSkills.css';
+import developerData from "../../Assets/info.json";
+import "./FloatingSkills.css";
+import { IoLogoXbox } from "react-icons/io";
+import { IoInformation } from "react-icons/io5";
 
 const iconMap = {
   ReactJS: FaReact,
@@ -37,7 +66,7 @@ const iconMap = {
   "Agile/Scrum": null, // No specific icon
   NextJS: SiNextdotjs,
   TailwindCSS: SiTailwindcss,
-  PHP: FaPhp
+  PHP: FaPhp,
 };
 
 const quadrantBoundaries = {
@@ -49,6 +78,8 @@ const quadrantBoundaries = {
 
 const FloatingSkills = () => {
   const { skills } = developerData;
+  const [toAnimate, setToAnimate] = useState(true);
+  const [selectedSkill, setSelectedSkill] = useState(null);
 
   const [positions] = useState(() => {
     const initialPositions = {};
@@ -56,18 +87,100 @@ const FloatingSkills = () => {
       const quadrant = quadrantBoundaries[category];
       if (!quadrant) return;
 
-      skillList.forEach(skill => {
-        initialPositions[skill] = {
-          top: `${Math.random() * (quadrant.top[1] - quadrant.top[0]) + quadrant.top[0]}%`,
-          left: `${Math.random() * (quadrant.left[1] - quadrant.left[0]) + quadrant.left[0]}%`,
+      const numSkills = skillList.length;
+      const gridCols = Math.ceil(Math.sqrt(numSkills));
+      const gridRows = Math.ceil(numSkills / gridCols);
+
+      const cellWidth = (quadrant.left[1] - quadrant.left[0]) / gridCols;
+      const cellHeight = (quadrant.top[1] - quadrant.top[0]) / gridRows;
+
+      skillList.forEach((skillData, index) => {
+        const col = index % gridCols;
+        const row = Math.floor(index / gridCols);
+
+        const left =
+          quadrant.left[0] + col * cellWidth + (Math.random() * cellWidth) / 4;
+        const top =
+          quadrant.top[0] + row * cellHeight + (Math.random() * cellHeight) / 4;
+
+        initialPositions[skillData.skill] = {
+          top: `${top}%`,
+          left: `${left}%`,
         };
       });
     });
     return initialPositions;
   });
 
+  const backdropVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
+
+  // Animation variants for the popup itself
+  // It will scale up and fade in from the center
+  const popupVariants = {
+    hidden: {
+      opacity: 0,
+      scale: 0.75,
+      transition: { type: "spring", stiffness: 300, damping: 30 },
+    },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { type: "spring", stiffness: 300, damping: 20 },
+    },
+  };
+
+  const iconClicked = (skill) => {
+    setSelectedSkill(skill);
+    setToAnimate(!toAnimate);
+    console.log("boom");
+  };
+
+  const ModalGG = () => {
+    return (
+      <>
+        {/* create a modal */}
+
+        <motion.div
+          className="modal-backdrop"
+          variants={backdropVariants}
+          initial="hidden"
+          animate="visible"
+          exit="hidden"
+          onClick={() => setToAnimate(true)} // Close modal when backdrop is clicked
+        >
+          <motion.div
+            className="modal-content"
+            variants={popupVariants}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            onClick={(e) => e.stopPropagation()} // Prevent click from closing modal
+          >
+            <div className="modal-header">
+              <h2>Skills : {selectedSkill}</h2>
+              <button
+                className="close-button"
+                onClick={() => setToAnimate(true)}
+              >
+                &times;
+              </button>
+            </div>
+            <div className="modal-body">
+              
+            </div>
+          </motion.div>
+        </motion.div>
+      </>
+    );
+  };
+
   return (
     <div className="floating-skills-container">
+      <AnimatePresence>{!toAnimate && <ModalGG />}</AnimatePresence>
+
       <div className="quadrant front-end">
         <h3 className="quadrant-title">Front End</h3>
       </div>
@@ -81,33 +194,51 @@ const FloatingSkills = () => {
         <h3 className="quadrant-title">Other</h3>
       </div>
 
-      {Object.values(skills).flat().map(skill => {
-        const Icon = iconMap[skill];
-        if (!Icon) return null;
+      {Object.values(skills)
+        .flat()
+        .map((skillData, index) => {
+          const Icon = iconMap[skillData.skill];
+          if (!Icon) return null;
 
-        return (
-          <motion.div
-            key={skill}
-            className="skill-bubble"
-            style={{
-              top: positions[skill]?.top,
-              left: positions[skill]?.left,
-            }}
-            animate={{
-              translateX: [(Math.random() - 0.5) * 20, (Math.random() - 0.5) * 20],
-              translateY: [(Math.random() - 0.5) * 20, (Math.random() - 0.5) * 20],
-            }}
-            transition={{
-              duration: Math.random() * 5 + 5,
-              repeat: Infinity,
-              repeatType: "mirror",
-              ease: "easeInOut",
-            }}
-          >
-            <Icon />
-          </motion.div>
-        );
-      })}
+          return (
+            <motion.div
+              onClick={() => iconClicked(skillData.skill)}
+              key={skillData.skill}
+              className="skill-bubble"
+              style={{
+                top: positions[skillData.skill]?.top,
+                left: positions[skillData.skill]?.left,
+              }}
+              animate={
+                toAnimate
+                  ? {
+                      translateX: [
+                        (Math.random() - 0.3) * 90,
+                        (Math.random() - 0.3) * 90,
+                      ],
+                      translateY: [
+                        (Math.random() - 0.3) * 90,
+                        (Math.random() - 0.3) * 90,
+                      ],
+                    }
+                  : {
+                      translateX: 0,
+                      translateY: 0,
+                    }
+              }
+              transition={
+                toAnimate && {
+                  duration: Math.random() * 2 + 2,
+                  repeat: Infinity,
+                  repeatType: "mirror",
+                  ease: "easeInOut",
+                }
+              }
+            >
+              <Icon />
+            </motion.div>
+          );
+        })}
     </div>
   );
 };
