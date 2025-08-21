@@ -32,7 +32,10 @@ const Skills = () => {
         <motion.h1 className="page-header" variants={itemVariants}>
           Skills
         </motion.h1>
+         <motion.div variants={containerVariants}>
+
         <FloatingSkills skills={allSkills} />
+         </motion.div>
       </motion.div>
     </div>
   );

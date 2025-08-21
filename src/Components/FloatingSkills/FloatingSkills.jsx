@@ -149,7 +149,7 @@ const FloatingSkills = () => {
           initial="hidden"
           animate="visible"
           exit="hidden"
-          onClick={() => setToAnimate(true)} // Close modal when backdrop is clicked
+          onClick={() => setToAnimate(true)}
         >
           <motion.div
             className="modal-content"
@@ -157,7 +157,7 @@ const FloatingSkills = () => {
             initial="hidden"
             animate="visible"
             exit="hidden"
-            onClick={(e) => e.stopPropagation()} // Prevent click from closing modal
+            onClick={(e) => e.stopPropagation()} 
           >
             <div className="modal-header">
               <h2>Skills : {selectedSkill}</h2>
@@ -168,9 +168,7 @@ const FloatingSkills = () => {
                 &times;
               </button>
             </div>
-            <div className="modal-body">
-              
-            </div>
+            <div className="modal-body"></div>
           </motion.div>
         </motion.div>
       </>
@@ -178,7 +176,7 @@ const FloatingSkills = () => {
   };
 
   return (
-    <div className="floating-skills-container">
+    <motion.div backdropVariants className="floating-skills-container">
       <AnimatePresence>{!toAnimate && <ModalGG />}</AnimatePresence>
 
       <div className="quadrant front-end">
@@ -239,7 +237,7 @@ const FloatingSkills = () => {
             </motion.div>
           );
         })}
-    </div>
+    </motion.div>
   );
 };
 
