@@ -80,6 +80,54 @@
   background-color: var(--background);
   padding: 20px;
   border-radius: 8px;
+  display: flex;
+  max-width: 800px;
+  height: 50%;
+}
+
+.modal-sidebar {
+  width: 310px;
+  border-left: 1px solid var(--primary);
+  padding-left: 20px;
+  overflow-y: auto;
+  flex-basis: 33%;
+}
+
+.modal-main-content {
+  flex-basis: 66%;
+  padding-left: 20px;
+}
+
+.modal-sidebar h3 {
+  text-decoration: underline;
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: var(--primary);
+  margin-bottom: 0.2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--primary-light);
+}
+
+.modal-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modal-sidebar li {
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+.modal-sidebar li:hover {
+  background-color: var(--primary-light);
+}
+
+.modal-sidebar li.active {
+  background-color: var(--primary);
+  color: var(--white);
 }
 
 .floating-skills-container .modal-header {
@@ -87,11 +135,32 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
-  border-bottom: 1px solid var(--primary);
+  padding-bottom: 0.5rem;
 }
 
-.floating-skills-container .modal-header button {
-  font-size: 1.2rem;
+.floating-skills-container .modal-header h2 {
+  border-bottom: 2px solid var(--primary);
+}
+
+.floating-skills-container .close-text {
+  position: absolute;
+  bottom: 3rem;
+  right: 3rem;
+}
+
+.close-button {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
   cursor: pointer;
+  padding: 0.5rem;
+}
+
+.close-button svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.close-button:hover {
   color: var(--danger);
 }

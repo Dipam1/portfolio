@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   FaReact,
@@ -34,6 +34,7 @@ import developerData from "../../Assets/info.json";
 import "./FloatingSkills.css";
 import { IoLogoXbox } from "react-icons/io";
 import { IoInformation } from "react-icons/io5";
+import { BiCloset } from "react-icons/bi";
 
 const iconMap = {
   ReactJS: FaReact,
@@ -135,14 +136,45 @@ const FloatingSkills = () => {
   const iconClicked = (skill) => {
     setSelectedSkill(skill);
     setToAnimate(!toAnimate);
-    console.log("boom");
   };
 
   const ModalGG = () => {
+    const [modalSelectedSkill, setModalSelectedSkill] = useState(selectedSkill);
+    const [isAnimating, setIsAnimating] = useState(false);
+    const [showCloseText, setShowCloseText] = useState(false);
+    const activeSkillRef = useRef(null);
+
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setShowCloseText(true);
+        setTimeout(() => setShowCloseText(false), 1500);
+      }, 3000);
+      return () => clearInterval(interval);
+    }, []);
+
+    useEffect(() => {
+      if (activeSkillRef.current) {
+        activeSkillRef.current.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
+      }
+    }, [modalSelectedSkill]);
+
+    const handleSkillClick = (skill) => {
+      setIsAnimating(true);
+      setTimeout(() => {
+        setModalSelectedSkill(skill);
+        setIsAnimating(false);
+      }, 300);
+    };
+
+    const selectedSkillData = Object.values(skills)
+      .flat()
+      .find((skill) => skill.skill === modalSelectedSkill);
+
     return (
       <>
-        {/* create a modal */}
-
         <motion.div
           className="modal-backdrop"
           variants={backdropVariants}
@@ -151,24 +183,72 @@ const FloatingSkills = () => {
           exit="hidden"
           onClick={() => setToAnimate(true)}
         >
+          <AnimatePresence>
+            {showCloseText && (
+              <motion.div
+                className="close-text"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0, rotate: [0, -2, 2, -2, 0] }}
+                exit={{ opacity: 0, y: 20 }}
+                transition={{
+                  duration: 0.5,
+                  repeat: Infinity,
+                  repeatType: "mirror",
+                }}
+              >
+                CLICK OUTSIDE TO CLOSE
+              </motion.div>
+            )}
+          </AnimatePresence>
           <motion.div
             className="modal-content"
             variants={popupVariants}
             initial="hidden"
-            animate="visible"
+            animate={isAnimating ? "hidden" : "visible"}
             exit="hidden"
-            onClick={(e) => e.stopPropagation()} 
+            onClick={(e) => e.stopPropagation()}
           >
-            <div className="modal-header">
-              <h2>Skills : {selectedSkill}</h2>
-              <button
-                className="close-button"
-                onClick={() => setToAnimate(true)}
-              >
-                &times;
-              </button>
+            <div className="modal-main-content">
+              <div className="modal-header">
+                <h2>{selectedSkillData?.skill}</h2>
+              </div>
+              <div className="modal-body">
+                <p>{selectedSkillData?.description}</p>
+                <h4>{selectedSkillData?.usage ? "Usage" : ""}</h4>
+                <p>{selectedSkillData?.usage}</p>
+              </div>
             </div>
-            <div className="modal-body"></div>
+            <div className="modal-sidebar">
+              {Object.entries(skills).map(([category, skillList]) => (
+                <div key={category}>
+                  <h3>
+                    {category
+                      .replace(/([A-Z])/g, " $1")
+                      .replace(/^./, function (str) {
+                        return str.toUpperCase();
+                      })}
+                  </h3>
+                  <ul>
+                    {skillList.map((skill) => (
+                      <li
+                        key={skill.skill}
+                        ref={
+                          modalSelectedSkill === skill.skill
+                            ? activeSkillRef
+                            : null
+                        }
+                        className={
+                          modalSelectedSkill === skill.skill ? "active" : ""
+                        }
+                        onClick={() => handleSkillClick(skill.skill)}
+                      >
+                        {skill.skill}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
           </motion.div>
         </motion.div>
       </>

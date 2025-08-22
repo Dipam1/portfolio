@@ -64,7 +64,7 @@ const navItems = [
   { name: "Education", icon: <FaGraduationCap /> },
   { name: "Experience", icon: <FaBriefcase /> },
   { name: "Skills", icon: <FaTools /> },
-  { name: "Achievements", icon: <FaMedal /> },
+  // { name: "Achievements", icon: <FaMedal /> },
   { name: "Contact", icon: <FaEnvelope /> },
 ];
 

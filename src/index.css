@@ -1,8 +1,6 @@
-
 :root {
   /* Border radius */
   --border-radius: 5px;
-
 
   /* Color palette */
   --primary: #3bb09e;
@@ -33,7 +31,6 @@
   --text-secondary: #9ca3af;
 
   --modal-mask-bg: rgba(212, 189, 189, 0.5);
-
 }
 
 * {
@@ -42,4 +39,18 @@
   font-weight: 400;
   font-size: 16px;
   font-style: normal;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background-color: #e7e7e7;
+  border: 1px solid #cacaca;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: #d55959;
 }
