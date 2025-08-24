@@ -29,7 +29,7 @@ const Contact = () => {
         animate="visible"
       >
         <motion.h1 className="page-header" variants={itemVariants}>
-          Contact
+          Contacts
         </motion.h1>
       </motion.div>
     </div>
