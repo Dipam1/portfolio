@@ -31,6 +31,9 @@ const Contact = () => {
         <motion.h1 className="page-header" variants={itemVariants}>
           Contacts
         </motion.h1>
+        <motion.div>
+          sss
+        </motion.div>
       </motion.div>
     </div>
   );
