@@ -32,7 +32,7 @@ const Contact = () => {
           Contacts
         </motion.h1>
         <motion.div>
-          sss
+          sssrrr
         </motion.div>
       </motion.div>
     </div>
