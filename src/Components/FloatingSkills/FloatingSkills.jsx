@@ -8,6 +8,7 @@ import {
   FaWordpress,
   FaPhp,
   FaAws,
+  FaJava,
 } from "react-icons/fa";
 import {
   SiJavascript,
@@ -28,6 +29,7 @@ import {
   SiFigma,
   SiNextdotjs,
   SiTailwindcss,
+  SiSpring,
 } from "react-icons/si";
 import { DiMysql } from "react-icons/di";
 import developerData from "../../Assets/info.json";
@@ -68,6 +70,9 @@ const iconMap = {
   NextJS: SiNextdotjs,
   TailwindCSS: SiTailwindcss,
   PHP: FaPhp,
+  Java: FaJava, 
+  Spring: SiSpring, 
+  
 };
 
 const quadrantBoundaries = {

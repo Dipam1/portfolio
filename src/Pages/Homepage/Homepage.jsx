@@ -17,7 +17,6 @@ import {
 } from "react-icons/fa";
 import "./Homepage.css";
 import { Route, Routes, useNavigate } from "react-router";
-import ParticlesBG from "../../Components/ParticlesBG";
 //get the selectedItem and write that as h1
 export default function Homepage() {
   //check the current path and set the selectedItem accordingly
@@ -109,7 +108,6 @@ const Layout = ({ children, selectedItem, setSelectedItem }) => {
 
       <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
         <main className="main-container main-page-container">
-          <ParticlesBG />
           {children}
         </main>
       </div>

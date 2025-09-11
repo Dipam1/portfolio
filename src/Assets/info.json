@@ -10,73 +10,108 @@
     "professionalSummary": "Versatile Front-End Developer with 3+ years of experience building and optimizing scalable web applications across healthcare, e-commerce, and enterprise platforms. Proficient in ReactJS, JavaScript, TypeScript, and Redux, with a strong focus on creating responsive, accessible, and user-centric interfaces. Skilled in modern UI frameworks like Material UI, Ant Design, and Bootstrap, and experienced in back-end integration using Node.js, ExpressJS, and RESTful APIs. Adept in DevOps tools such as Docker, Git, and Heroku, with hands-on experience deploying applications via AWS and managing CI/CD workflows. Strong background in working with SQL and NoSQL databases, including MongoDB, Firebase, and SQL Server, with proven ability to design secure, scalable data flows. Passionate about clean code, agile collaboration, and continuously evolving with technologies like Next.js and Tailwind CSS to deliver high-performing, maintainable products.",
     "experience": [
         {
-            "company": "Nimble Clinical Research",
-            "location": "New Jersey (Remote)",
-            "title": "Software Developer",
-            "startDate": "Jan 2022",
-            "endDate": "Jan 2023",
+            "company": "United Healthcare",
+            "location": "New York, NY",
+            "title": "Full Stack Developer",
+            "startDate": "Sept 2024",
+            "endDate": "Present",
             "responsibilities": [
-                "Redesigned and optimized the Nimble Clinical application using ReactJS and Redux, resulting in a 400ms reduction in system load time.",
-                "Enhanced team productivity by streamlining task coordination and integrating Zoho APIs for workflow automation.",
-                "Developed and customized responsive Shopify themes using Liquid, HTML, and CSS, aligning with branding and performance standards.",
-                "Implemented data visualizations and interactive UI components using Material UI, Bootstrap, GraphQL, and REST APIs to improve user engagement."
+                "Designed and developed responsive web applications with ReactJS, Redux, TypeScript, and Spring Boot backend APIs.",
+                "Created reusable React components and hooks to accelerate development and ensure consistency across modules.",
+                "Built secure RESTful APIs in Java, integrating patient, claims, and coverage data with backend systems.",
+                "Implemented role-based authentication and authorization using Spring Security and JWT.",
+                "Collaborated with UI/UX teams to ensure compliance with WCAG 2.1 accessibility standards and HIPAA regulations.",
+                "Improved application performance by reducing page load time by 30% using React performance optimizations."
             ],
             "technologies": [
+                "Java",
+                "Spring Boot",
                 "ReactJS",
                 "Redux",
-                "JavaScript",
-                "Liquid",
+                "TypeScript",
+                "REST APIs",
+                "SQL",
+                "Git",
+                "Agile/Scrum"
+            ]
+        },
+        {
+            "company": "Nimble Clinical Research",
+            "location": "New Jersey (Remote)",
+            "title": "Full Stack Developer",
+            "startDate": "Mar 2022",
+            "endDate": "Aug 2022",
+            "responsibilities": [
+                "Developed front-end features using ReactJS, Redux, and TypeScript, ensuring a responsive and modern UI.",
+                "Built backend services with Java Spring Boot, managing clinical research workflows and task automation.",
+                "Integrated Zoho APIs for CRM and workflow automation, reducing manual effort by 25%.",
+                "Customized and enhanced Shopify themes using Liquid, HTML5, and CSS3 to meet branding requirements.",
+                "Created interactive dashboards with Material UI and Bootstrap for better research data visualization.",
+                "Designed GraphQL APIs for optimized querying of clinical data."
+            ],
+            "technologies": [
+                "Java",
+                "Spring Boot",
+                "ReactJS",
+                "Redux",
+                "TypeScript",
                 "Zoho API",
                 "GraphQL",
                 "REST APIs",
+                "Shopify",
+                "Liquid",
                 "Material UI",
                 "Bootstrap"
             ]
         },
         {
-            "company": "Pegotec Pte. Ltd",
-            "location": "Singapore City",
-            "title": "Web Developer",
-            "startDate": "Dec 2020",
-            "endDate": "Jan 2022",
+            "company": "Pegotec Pte. Ltd.",
+            "location": "Singapore City (Remote)",
+            "title": "Full Stack Developer",
+            "startDate": "Oct 2021",
+            "endDate": "Feb 2022",
             "responsibilities": [
-                "Built and deployed 5+ commercial-grade websites using React, Redux, Node.js, and MongoDB, emphasizing performance and maintainability.",
-                "Modernized and maintained legacy systems with ReactJS class components, ensuring system compatibility and long-term support.",
-                "Developed interactive admin dashboards featuring real-time map updates and live data streams for dynamic client monitoring.",
-                "Led Docker-based deployments and managed AWS environments, ensuring seamless CI/CD and uptime.",
-                "Boosted query performance by 25% through integration of SQL Server and query optimization techniques."
+                "Built and deployed 5+ web applications using ReactJS (frontend) and Node.js/MongoDB (backend).",
+                "Migrated legacy applications to ReactJS class components, ensuring long-term maintainability.",
+                "Designed and implemented real-time dashboards with live maps and data streams for client monitoring.",
+                "Optimized MongoDB queries and indexes to enhance system performance and scalability.",
+                "Deployed applications on AWS EC2 and S3 with Docker containers for CI/CD.",
+                "Implemented user authentication and authorization using JWT and OAuth 2.0."
             ],
             "technologies": [
+                "Node.js",
                 "ReactJS",
                 "Redux",
-                "Node.js",
                 "MongoDB",
                 "SQL Server",
                 "AWS",
                 "Docker",
-                "Ant Design"
+                "Ant Design",
+                "REST APIs"
             ]
         },
         {
-            "company": "PrismaSofts",
-            "location": "Kathmandu, Nepal",
+            "company": "Cedar Gate Technologies",
+            "location": "Connecticut, USA",
             "title": "Full Stack Developer",
-            "startDate": "Dec 2019",
-            "endDate": "Nov 2020",
+            "startDate": "Jan 2019",
+            "endDate": "Sept 2021",
             "responsibilities": [
-                "Built dynamic web apps with ReactJS, Node.js, and Firebase, including custom REST APIs and user authentication systems.",
-                "Designed flexible WordPress sites with PHP-backed dashboards for easy content management.",
-                "Managed Git-based project workflows, resolving merge conflicts and supporting multi-branch collaboration.",
-                "Created optimized SQL schemas and streamlined database operations, increasing data retrieval performance by 30%."
+                "Designed healthcare analytics dashboards using ReactJS for UI and Node.js for backend services.",
+                "Built data visualization modules to track value-based care metrics and population health insights.",
+                "Developed Node.js REST APIs for data ingestion from enterprise healthcare systems.",
+                "Optimized SQL queries and backend pipelines, improving large-scale dataset processing by 30%.",
+                "Integrated APIs with payment adjudication systems for bundled payments and claims processing.",
+                "Migrated monolithic applications into modular microservices with Node.js and Express."
             ],
             "technologies": [
-                "ReactJS",
                 "Node.js",
-                "Firebase",
-                "WordPress",
-                "PHP",
+                "ReactJS",
                 "SQL",
-                "Git"
+                "Git",
+                "Docker",
+                "Healthcare Analytics",
+                "Payment Adjudication APIs"
             ]
         }
     ],
@@ -142,6 +177,10 @@
                 "usage": "Used for state management in applications ensuring consistent data flow."
             },
             {
+                "skill": "Thunk/Saga",
+                "description": "Middleware for Redux to handle asynchronous actions."
+            },
+            {
                 "skill": "HTML5",
                 "description": "The standard markup language for documents designed to be displayed in a web browser."
             },
@@ -163,9 +202,21 @@
                 "skill": "Bootstrap",
                 "description": "A popular CSS framework directed at responsive, mobile-first front-end web development.",
                 "usage": "Ensured responsive design and implemented UI components."
+            },
+            {
+                "skill": "WCAG",
+                "description": "Web Content Accessibility Guidelines for making web content more accessible to people with disabilities."
             }
         ],
         "backEnd": [
+            {
+                "skill": "Java",
+                "description": "A high-level, class-based, object-oriented programming language."
+            },
+            {
+                "skill": "Spring Boot",
+                "description": "An open-source, microservice-based Java web framework."
+            },
             {
                 "skill": "Node.js",
                 "description": "A back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser.",
@@ -196,9 +247,25 @@
                 "usage": "Optimized schemas and boosted query performance."
             },
             {
+                "skill": "SQL Server",
+                "description": "A relational database management system developed by Microsoft."
+            },
+            {
                 "skill": "GraphQL",
                 "description": "A query language for APIs and a runtime for fulfilling those queries with your existing data.",
                 "usage": "Implemented for interactive UI components."
+            },
+            {
+                "skill": "Spring Security",
+                "description": "A framework that provides authentication, authorization, and other security features for enterprise applications."
+            },
+            {
+                "skill": "JWT",
+                "description": "JSON Web Token is a compact, URL-safe means of representing claims to be transferred between two parties."
+            },
+            {
+                "skill": "OAuth 2.0",
+                "description": "An authorization framework that enables applications to obtain limited access to user accounts on an HTTP service."
             }
         ],
         "devOpsAndTools": [
@@ -206,6 +273,10 @@
                 "skill": "Git (GitHub, GitLab)",
                 "description": "A distributed version control system for tracking changes in source code during software development.",
                 "usage": "Managed workflows, resolved conflicts, and supported collaboration."
+            },
+            {
+                "skill": "Jenkins",
+                "description": "An open source automation server which enables developers to reliably build, test, and deploy their software."
             },
             {
                 "skill": "Docker",
@@ -234,6 +305,34 @@
             {
                 "skill": "Jira",
                 "description": "A proprietary issue tracking product developed by Atlassian that allows bug tracking and agile project management."
+            },
+            {
+                "skill": "Confluence",
+                "description": "A web-based corporate wiki (collaboration software) developed by Atlassian."
+            },
+            {
+                "skill": "Postman",
+                "description": "An API platform for building and using APIs."
+            },
+            {
+                "skill": "JUnit",
+                "description": "A unit testing framework for the Java programming language."
+            },
+            {
+                "skill": "Mockito",
+                "description": "An open source testing framework for Java."
+            },
+            {
+                "skill": "Jest",
+                "description": "A JavaScript testing framework with a focus on simplicity."
+            },
+            {
+                "skill": "Mocha",
+                "description": "A feature-rich JavaScript test framework running on Node.js and in the browser."
+            },
+            {
+                "skill": "Chai",
+                "description": "A BDD / TDD assertion library for node and the browser that can be delightfully paired with any javascript testing framework."
             }
         ],
         "other": [
@@ -259,6 +358,10 @@
             {
                 "skill": "Agile/Scrum",
                 "description": "A framework for project management that emphasizes teamwork, accountability and iterative progress toward a well-defined goal."
+            },
+            {
+                "skill": "HIPAA",
+                "description": "The Health Insurance Portability and Accountability Act, a US federal law that required the creation of national standards to protect sensitive patient health information."
             }
         ]
     }
