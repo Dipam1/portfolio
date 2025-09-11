@@ -4,7 +4,6 @@ import Education from "../Education/Education";
 import Experience from "../Experience/Experience";
 import Skills from "../Skills/Skills";
 import Contact from "../Contact/Contact";
-import Achievements from "../Achievements/Achievements";
 import Introduction from "../Introduction/Introduction";
 import {
   FaChevronLeft,
@@ -52,7 +51,6 @@ export default function Homepage() {
           <Route path="/education" element={<Education />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="/skills" element={<Skills />} />
-          <Route path="/achievements" element={<Achievements />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Layout>
@@ -111,7 +109,6 @@ const Layout = ({ children, selectedItem, setSelectedItem }) => {
 
       <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
         <main className="main-container main-page-container">
-          {/* implement tsparticles */}
           <ParticlesBG />
           {children}
         </main>

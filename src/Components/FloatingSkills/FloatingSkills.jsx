@@ -116,6 +116,7 @@ const FloatingSkills = () => {
   const backdropVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
+    
   };
 
   // Animation variants for the popup itself
@@ -166,7 +167,7 @@ const FloatingSkills = () => {
       setTimeout(() => {
         setModalSelectedSkill(skill);
         setIsAnimating(false);
-      }, 300);
+      }, 10);
     };
 
     const selectedSkillData = Object.values(skills)
