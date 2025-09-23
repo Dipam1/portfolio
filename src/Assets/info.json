@@ -5,7 +5,17 @@
         "location": "Queens, NY, 11377",
         "phone": "9296220922",
         "email": "dipampoudel1998@gmail.com",
-        "linkedin": "in/dipam-poudel"
+        "linkedin": "in/dipam-poudel",
+        "language": [
+            "English",
+            "Nepali",
+            "Hindi"
+        ],
+        "interests": [
+            "Football(Soccer)",
+            "Movies",
+            "Hiking"
+        ]
     },
     "professionalSummary": "Full Stack Developer with 5+ years of hands-on experience in developing scalable enterprise applications and healthcare solutions using Java (Spring Boot), ReactJS, Node.js, Redux, and SQL/NoSQL databases. Skilled in designing responsive UIs, integrating REST/GraphQL APIs, optimizing backend performance, and deploying cloud-native applications. Experienced in Agile/Scrum methodologies, CI/CD pipelines, and delivering secure, HIPAA-compliant solutions. Strong focus on performance, accessibility, and collaboration across cross-functional teams.",
     "experience": [

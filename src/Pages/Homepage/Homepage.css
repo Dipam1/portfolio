@@ -16,6 +16,7 @@
 
 .sidebar-inner {
   position: fixed;
+  width: inherit;
   display: flex;
   flex-direction: column;
   height: 100%;

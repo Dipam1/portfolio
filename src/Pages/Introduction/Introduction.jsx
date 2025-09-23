@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 // To use motion effects, you'll need to install framer-motion
 // npm install framer-motion
 import { motion } from "framer-motion";
 import developerData from "../../Assets/info.json";
 import "./Introduction.css";
 import AIComponent from "../../AI/AIComponent";
+import { Typewriter } from "../../Assets/TypeWriter";
 
 // Helper for icons
 const Icon = ({ path, className = "icon" }) => (
@@ -30,7 +31,10 @@ const ICONS = {
     "M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z",
 };
 
-export default function App() {
+export default function Introduction() {
+  const [result, setResult] = useState(null);
+  const [isChecked, setIsChecked] = useState(false);
+
   const { personalInfo, professionalSummary } = developerData;
 
   const containerVariants = {
@@ -60,17 +64,34 @@ export default function App() {
             initial="hidden"
             animate="visible"
           >
-            <motion.img
-              src="https://placehold.co/400x400/1a202c/718096?text=DP"
-              alt="Profile Picture"
-              className="profile-image"
-              onError={(e) => {
-                e.target.onerror = null;
-                e.target.src =
-                  "https://placehold.co/400x400/1a202c/718096?text=DP";
-              }}
+            <motion.div
+              className="profile-image ai-section"
               variants={itemVariants}
-            />
+            >
+              {!isChecked ? (
+                <motion.div
+                  className="close-text"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0, rotate: [0, -2, 2, -2, 0] }}
+                  exit={{ opacity: 0, y: 20 }}
+                  transition={{
+                    duration: 0.5,
+                    repeat: Infinity,
+                    repeatType: "mirror",
+                  }}
+                >
+                  Click Here
+                </motion.div>
+              ) : (
+                ""
+              )}
+              <AIComponent
+                isChecked={isChecked}
+                setIsChecked={setIsChecked}
+                setResult={setResult}
+                result={result}
+              />
+            </motion.div>
             <motion.h1 className="intro-name" variants={itemVariants}>
               {personalInfo.name}
             </motion.h1>
@@ -84,7 +105,11 @@ export default function App() {
             </motion.div>
 
             <motion.p className="summary" variants={itemVariants}>
-              {professionalSummary}
+              {result?.answer ? (
+                <Typewriter text={result.answer} />
+              ) : (
+                professionalSummary
+              )}
             </motion.p>
 
             <motion.div className="social-links" variants={itemVariants}>
@@ -106,9 +131,6 @@ export default function App() {
               </motion.a>
             </motion.div>
           </motion.header>
-          <div className="ai-section">
-            <AIComponent />
-          </div>
         </div>
       </div>
     </>

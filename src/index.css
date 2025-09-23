@@ -12,7 +12,7 @@
   --background: #1b1c1d;
 
   /* Sidebar */
-  --a:#eff;
+  --a: #eff;
   --sidebar-bg: #282a2c;
   --sidebar-text: #f9fafb;
   --sidebar-hover-bg: #1f6e89;
@@ -29,6 +29,8 @@
   /* Text colors */
   --text-primary: #f9fafb;
   --text-secondary: #9ca3af;
+
+  --card-color: #2d3748;
 
   --modal-mask-bg: rgba(212, 189, 189, 0.5);
 }
@@ -53,4 +55,22 @@
 ::-webkit-scrollbar-thumb {
   border-radius: 8px;
   background-color: #d55959;
+}
+
+/* Loader */
+.loader {
+  width: 400px;
+  height: 30px;
+  --c: #ffffff 92%, #0000;
+  background: radial-gradient(circle 7px at bottom, var(--c)) 0 0,
+    radial-gradient(circle 7px at top, var(--c)) 0 100%;
+  background-size: calc(100% / 4) 50%;
+  background-repeat: repeat-x;
+  animation: l11 1s infinite;
+}
+@keyframes l11 {
+  80%,
+  100% {
+    background-position: calc(100% / 3) 0, calc(100% / -3) 100%;
+  }
 }

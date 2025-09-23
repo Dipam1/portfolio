@@ -1,18 +1,17 @@
 import React, { useState, useCallback } from "react";
 import { respondAsDipam as geminirespondAsDipam } from "./GeminiAI"; // Renamed to avoid conflict
 import { motion } from "framer-motion";
+import pp from "../Assets/pp.png";
 
 import "./AIComponent.css";
 import { Typewriter } from "../Assets/TypeWriter";
 
-const AIComponent = () => {
+const AIComponent = ({ result, setResult, isChecked, setIsChecked }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [result, setResult] = useState(null);
+  const [isResultOpen, setIsResultOpen] = useState(false);
   const [error, setError] = useState(null);
 
-  const [isChecked, setIsChecked] = useState(false);
-  const [isValid, setIsValid] = useState(false);
 
   const handleToggle = () => {
     setIsChecked(!isChecked);
@@ -20,6 +19,7 @@ const AIComponent = () => {
 
   const respondToChat = useCallback(async (query) => {
     setIsLoading(true);
+    setIsResultOpen(false);
     setError(null); // Clear previous errors
     try {
       const result = await geminirespondAsDipam(query);
@@ -29,9 +29,10 @@ const AIComponent = () => {
       setError("An error occurred.Please try again later.");
     } finally {
       setIsLoading(false);
+      setSearchTerm("");
+      setIsResultOpen(true);
     }
   }, []);
-
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -42,13 +43,19 @@ const AIComponent = () => {
     },
   };
 
-  const Result = () => {
-    return (
-      <div className="ai-result">
-        {isLoading && <p>Loading...</p>}
-        {result?.answer ? <Typewriter text={result.answer} /> : ""}
-      </div>
-    );
+  const popVariant = {
+    open: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { type: "spring", stiffness: 300, damping: 24 },
+    },
+    closed: {
+      opacity: 0,
+      y: 20,
+      scale: 0.9,
+      transition: { duration: 0.2 },
+    },
   };
 
   return (
@@ -58,11 +65,13 @@ const AIComponent = () => {
       initial="hidden"
       animate="visible"
     >
+      
       {error && <p style={{ color: "red" }}>{error}</p>}
 
       <div className={`c-formContainer ${isChecked ? "is-checked" : ""}`}>
         <div className="c-form">
           <input
+            name="chat-input"
             className="c-form__input"
             placeholder="ASK ME ANYTHING"
             type="text"
@@ -83,14 +92,13 @@ const AIComponent = () => {
               Send
             </button>
           </label>
-          <label
-            className="c-form__toggle"
-            data-title="Click to ask me ANYTHING!!"
-            onClick={handleToggle}
-          ></label>
+          <div className="c-form__toggle bg-none" onClick={handleToggle}>
+            <img src={pp} alt="" />
+          </div>
         </div>
       </div>
-      <Result />
+
+      {isLoading && <div className="loader"></div>}
     </motion.div>
   );
 };

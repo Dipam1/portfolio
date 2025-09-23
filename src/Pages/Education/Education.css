@@ -1,6 +1,5 @@
 .education-page {
     color: var(--text-color);
-    font-family: sans-serif;
     min-height: 100vh;
     padding: 4rem 1rem;
     display: flex;
@@ -24,7 +23,7 @@
 }
 
 .education-card {
-    background-color: #2d3748; /* A slightly lighter shade than the background */
+    background-color: var(--card-color); /* A slightly lighter shade than the background */
     border-radius: 8px;
     padding: 1.5rem;
     border-left: 4px solid var(--primary);

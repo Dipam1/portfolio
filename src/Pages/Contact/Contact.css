@@ -1,11 +1,21 @@
 .contact-page {
   color: var(--text-color);
-  font-family: sans-serif;
-  min-height: 100vh;
   padding: 4rem 1rem;
   display: flex;
   justify-content: center;
   align-items: flex-start;
+}
+
+.contact-page .contact-content {
+  max-width: 900px;
+
+  background-color: var(--card-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  border-left: 4px solid var(--primary);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact-page .contact-container {
@@ -21,7 +31,7 @@
 
 .contact-container input,
 .contact-container textarea {
-  width: 100%;
+  width: -webkit-fill-available;
   padding: 0.75rem;
   margin-bottom: 1rem;
   border: 1px solid var(--primary);
