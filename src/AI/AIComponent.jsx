@@ -46,7 +46,7 @@ const AIComponent = () => {
     return (
       <div className="ai-result">
         {isLoading && <p>Loading...</p>}
-        {result.answer ? <Typewriter text={result.answer} /> : ""}
+        {result?.answer ? <Typewriter text={result.answer} /> : ""}
       </div>
     );
   };
