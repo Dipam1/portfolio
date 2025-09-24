@@ -107,12 +107,22 @@ const Layout = ({ children, selectedItem, setSelectedItem }) => {
       </motion.div>
 
       <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
-        <main className="main-container main-page-container">
-          {children}
-        </main>
+        <main className="main-container main-page-container">{children}</main>
       </div>
     </div>
   );
+};
+
+const wobble = {
+  initial: { scale: 1 },
+  animate: {
+    scale: 1.1,
+    transition: {
+      repeat: Infinity,
+      repeatType: "reverse",
+      duration: 1.5,
+    },
+  },
 };
 
 const SidebarContent = ({
@@ -156,7 +166,42 @@ const SidebarContent = ({
       <nav className="nav-menu">
         <ul>
           {navItems.map((item) => (
-            <li
+            <motion.li
+              //
+
+              animate={{
+                borderRadius: [
+                  "60% 40% 30% 70% / 60% 30% 70% 40%",
+                  "30% 70% 62% 38% / 40% 60% 40% 60%",
+                  "55% 45% 35% 65% / 58% 42% 58% 42%",
+                  "40% 60% 70% 30% / 45% 55% 45% 55%",
+                  "68% 32% 53% 47% / 61% 55% 45% 39%",
+                  "34% 66% 66% 34% / 50% 40% 60% 50%",
+                  "50% 50% 50% 50% / 50% 50% 50% 50%",
+                  "42% 58% 58% 42% / 63% 37% 63% 37%",
+                  "61% 39% 49% 51% / 44% 56% 44% 56%",
+                  "36% 64% 56% 44% / 59% 41% 59% 41%",
+                  "53% 47% 67% 33% / 41% 59% 41% 59%",
+                  "69% 31% 41% 59% / 54% 46% 54% 46%",
+                  "45% 55% 45% 55% / 65% 35% 65% 35%",
+                  "50% 50% 50% 50% / 50% 50% 50% 50%",
+                ],
+              }}
+              transition={{
+                duration: 12,
+                ease: "easeInOut",
+                repeat: Infinity,
+                repeatType: "mirror",
+              }}
+              // Example styles to make the component visible
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                color: "black",
+                fontWeight: "bold",
+              }}
+              //
               key={item.name}
               className={`nav-item ${
                 selectedItem === item.name ? "active" : ""
@@ -169,7 +214,7 @@ const SidebarContent = ({
                 <div className="nav-icon">{item.icon}</div>
                 {!isCollapsed && <span className="nav-text">{item.name}</span>}
               </button>
-            </li>
+            </motion.li>
           ))}
         </ul>
       </nav>

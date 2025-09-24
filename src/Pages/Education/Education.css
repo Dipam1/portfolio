@@ -1,6 +1,5 @@
 .education-page {
     color: var(--text-color);
-    min-height: 100vh;
     padding: 2rem 1rem;
     display: flex;
     justify-content: center;
@@ -12,9 +11,6 @@
     max-width: 900px;
     margin: 0 auto;
 }
-
-
-
 .education-timeline {
     position: relative;
     display: flex;

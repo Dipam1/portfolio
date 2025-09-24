@@ -3,6 +3,9 @@ import { motion } from 'framer-motion';
 import developerData from '../../Assets/info.json';
 import './Education.css';
 
+import itemVariants from "../../Assets/itemVariant.json";
+
+
 const Education = () => {
   const { education } = developerData;
 
@@ -14,10 +17,7 @@ const Education = () => {
     }
   };
 
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: { y: 0, opacity: 1, transition: { type: 'spring', stiffness: 100 } }
-  };
+
 
   return (
     <div className="education-page">

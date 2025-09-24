@@ -115,8 +115,24 @@
   position: relative;
 }
 
-.nav-menu li .nav-button:hover {
-  background-color: var(--secondary);
+.nav-menu ul li button {
+  position: relative;
+}
+.nav-menu ul li button:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: ".";
+  color: transparent;
+  background: var(--primary);
+  height: 2px;
+  transition: width 0.3s ease-out;
+}
+.nav-menu ul li button:hover:after {
+  width: 60%;
 }
 
 .nav-icon {
@@ -141,4 +157,3 @@
 .main-header {
   display: none; /* Hidden by default, shown on mobile */
 }
-

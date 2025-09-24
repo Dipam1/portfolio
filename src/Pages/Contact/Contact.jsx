@@ -1,3 +1,4 @@
+import itemVariants from "../../Assets/itemVariant.json";
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -14,14 +15,7 @@ const Contact = () => {
     },
   };
 
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: { type: "spring", stiffness: 100 },
-    },
-  };
+  //ITEM VAR
 
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -58,24 +52,24 @@ const Contact = () => {
           Contact
         </motion.h1>
         <motion.div variants={itemVariants} className="contact-content">
-            <motion.form className="contact-form" onSubmit={onSubmit}>
-              <input type="text" name="name" placeholder="Your Name" required />
-              <input
-                type="email"
-                name="email"
-                placeholder="Your Email"
-                required
-              />
-              <textarea
-                name="message"
-                placeholder="Your Message"
-                required
-              ></textarea>
-              <button type="submit">Submit Form</button>
-            </motion.form>
-            <span>{result}</span>
-          </motion.div>
+          <motion.form className="contact-form" onSubmit={onSubmit}>
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              required
+            ></textarea>
+            <button type="submit">Submit Form</button>
+          </motion.form>
+          <span>{result}</span>
         </motion.div>
+      </motion.div>
     </div>
   );
 };
