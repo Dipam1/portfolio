@@ -35,7 +35,7 @@ const Contact = () => {
       setResult("Message Sent Successfully!!!");
       event.target.reset();
     } else {
-      console.log("Error", data);
+      console.log("Errrror", data);
       setResult(data.message);
     }
   };
