@@ -13,7 +13,6 @@
             "Urdu"
         ],
         "interests": [
-
             "Football(Soccer)",
             "Movies",
             "Hiking",
@@ -60,21 +59,34 @@
                 "Integrated Zoho APIs for CRM and workflow automation, reducing manual effort by 25%.",
                 "Customized and enhanced Shopify themes using Liquid, HTML5, and CSS3 to meet branding requirements.",
                 "Created interactive dashboards with Material UI and Bootstrap for better research data visualization.",
-                "Designed GraphQL APIs for optimized querying of clinical data."
+                "Designed GraphQL APIs for optimized querying of clinical data.",
+                "Implemented RESTful services for backend data integration with third-party applications.",
+                "Enhanced security with Spring Security, validating sensitive research data access.",
+                "Wrote unit and integration tests using JUnit, Mockito, and Jest to ensure high code coverage.",
+                "Collaborated with remote teams using Agile methodologies and tools like Jira and Confluence.",
+                "Deployed services on AWS cloud, ensuring high availability and scalability."
             ],
             "technologies": [
-                "Java",
-                "Spring Boot",
                 "ReactJS",
                 "Redux",
                 "TypeScript",
-                "Zoho API",
-                "GraphQL",
-                "REST APIs",
-                "Shopify",
+                "Java",
+                "Spring Boot",
+                "Zoho APIs",
                 "Liquid",
+                "HTML5",
+                "CSS3",
                 "Material UI",
-                "Bootstrap"
+                "Bootstrap",
+                "GraphQL",
+                "RESTful services",
+                "Spring Security",
+                "JUnit",
+                "Mockito",
+                "Jest",
+                "Jira",
+                "Confluence",
+                "AWS cloud"
             ]
         },
         {
