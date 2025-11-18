@@ -33,7 +33,6 @@ const ICONS = {
 
 export default function Introduction() {
   const [result, setResult] = useState(null);
-  const [isChecked, setIsChecked] = useState(false);
 
   const { personalInfo, professionalSummary } = developerData;
 
@@ -68,29 +67,7 @@ export default function Introduction() {
               className="profile-image ai-section"
               variants={itemVariants}
             >
-              {!isChecked ? (
-                <motion.div
-                  className="close-text"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0, rotate: [0, -2, 2, -2, 0] }}
-                  exit={{ opacity: 0, y: 20 }}
-                  transition={{
-                    duration: 0.5,
-                    repeat: Infinity,
-                    repeatType: "mirror",
-                  }}
-                >
-                  Click Here
-                </motion.div>
-              ) : (
-                ""
-              )}
-              <AIComponent
-                isChecked={isChecked}
-                setIsChecked={setIsChecked}
-                setResult={setResult}
-                result={result}
-              />
+              <AIComponent setResult={setResult} />
             </motion.div>
             <motion.h1 className="intro-name" variants={itemVariants}>
               {personalInfo.name}

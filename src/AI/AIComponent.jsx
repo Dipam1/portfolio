@@ -1,19 +1,21 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useRef } from "react";
 import { motion } from "framer-motion";
 import pp from "../Assets/pp.png";
 
 import "./AIComponent.css";
 
-
-const AIComponent = ({ result, setResult, isChecked, setIsChecked }) => {
+const AIComponent = ({ setResult }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  
+  const [isChecked, setIsChecked] = useState(false);
   const [error, setError] = useState(null);
-
+  const inputRef = useRef(null);
 
   const handleToggle = () => {
     setIsChecked(!isChecked);
+    if (inputRef.current) {
+      inputRef.current.focus();
+    }
   };
 
   const respondToChat = useCallback(
@@ -55,8 +57,6 @@ const AIComponent = ({ result, setResult, isChecked, setIsChecked }) => {
     },
   };
 
-  
-
   return (
     <motion.div
       className="ai-component"
@@ -64,7 +64,6 @@ const AIComponent = ({ result, setResult, isChecked, setIsChecked }) => {
       initial="hidden"
       animate="visible"
     >
-      
       {error && <p style={{ color: "red" }}>{error}</p>}
 
       <div className={`c-formContainer ${isChecked ? "is-checked" : ""}`}>
@@ -74,6 +73,7 @@ const AIComponent = ({ result, setResult, isChecked, setIsChecked }) => {
             className="c-form__input"
             placeholder="ASK ME ANYTHING"
             type="text"
+            ref={inputRef}
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             onKeyUp={(e) => {

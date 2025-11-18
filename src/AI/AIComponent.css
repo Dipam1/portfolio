@@ -15,6 +15,7 @@
 /* Original :checked logic translated to a class */
 .ai-component .c-formContainer.is-checked .c-form {
   width: 99em;
+  height: 55px;
 }
 
 .ai-component .c-formContainer.is-checked .c-form__toggle {
@@ -82,7 +83,7 @@
     #e86df9
   );
   background-size: 400% 400%;
-  animation: gradient 2s ease infinite;
+  animation: gradient 7s ease infinite;
 }
 
 @keyframes gradient {
@@ -133,7 +134,7 @@
   font: inherit;
   border: 0;
   outline: 0;
-  border-radius: 5em;
+  border-radius: 1em;
   box-sizing: border-box;
 }
 
@@ -180,9 +181,10 @@
 }
 
 .c-form__button {
-  color: inherit;
+  color: var(--background);
   padding: 0;
   height: 100%;
   width: 5em;
   background-color: var(--primary);
+  cursor: pointer;
 }
