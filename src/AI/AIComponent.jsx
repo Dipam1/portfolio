@@ -1,15 +1,14 @@
 import React, { useState, useCallback } from "react";
-import { respondAsDipam as geminirespondAsDipam } from "./GeminiAI"; // Renamed to avoid conflict
 import { motion } from "framer-motion";
 import pp from "../Assets/pp.png";
 
 import "./AIComponent.css";
-import { Typewriter } from "../Assets/TypeWriter";
+
 
 const AIComponent = ({ result, setResult, isChecked, setIsChecked }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [isResultOpen, setIsResultOpen] = useState(false);
+  
   const [error, setError] = useState(null);
 
 
@@ -17,22 +16,35 @@ const AIComponent = ({ result, setResult, isChecked, setIsChecked }) => {
     setIsChecked(!isChecked);
   };
 
-  const respondToChat = useCallback(async (query) => {
-    setIsLoading(true);
-    setIsResultOpen(false);
-    setError(null); // Clear previous errors
-    try {
-      const result = await geminirespondAsDipam(query);
-      setResult(result);
-    } catch (err) {
-      console.error(err);
-      setError("An error occurred.Please try again later.");
-    } finally {
-      setIsLoading(false);
-      setSearchTerm("");
-      setIsResultOpen(true);
-    }
-  }, []);
+  const respondToChat = useCallback(
+    async (query) => {
+      if (!query || !query.trim()) return;
+      setIsLoading(true);
+      setError(null); // Clear previous errors
+      try {
+        const res = await fetch("/.netlify/functions/gemini", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ query }),
+        });
+
+        if (!res.ok) {
+          const text = await res.text();
+          throw new Error(`Function error: ${res.status} ${text}`);
+        }
+
+        const data = await res.json();
+        setResult(data);
+      } catch (err) {
+        console.error(err);
+        setError("An error occurred. Please try again later.");
+      } finally {
+        setIsLoading(false);
+        setSearchTerm("");
+      }
+    },
+    [setResult]
+  );
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -43,20 +55,7 @@ const AIComponent = ({ result, setResult, isChecked, setIsChecked }) => {
     },
   };
 
-  const popVariant = {
-    open: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: { type: "spring", stiffness: 300, damping: 24 },
-    },
-    closed: {
-      opacity: 0,
-      y: 20,
-      scale: 0.9,
-      transition: { duration: 0.2 },
-    },
-  };
+  
 
   return (
     <motion.div
