@@ -1,0 +1,393 @@
+{
+    "personalInfo": {
+        "name": "Dipam Poudel",
+        "title": "Software Engineer",
+        "location": "Queens, NY, 11377",
+        "phone": "9296220922",
+        "email": "dipampoudel1998@gmail.com",
+        "linkedin": "in/dipam-poudel",
+        "language": [
+            "English",
+            "Nepali",
+            "Hindi",
+            "Urdu"
+        ],
+        "interests": [
+            "Football(Soccer)",
+            "Movies",
+            "Hiking",
+            "Swimming"
+        ]
+    },
+    "professionalSummary": "Full Stack Developer with 5+ years of hands-on experience in developing scalable enterprise applications and healthcare solutions using Java (Spring Boot), ReactJS, Node.js, Redux, and SQL/NoSQL databases. Skilled in designing responsive UIs, integrating REST/GraphQL APIs, optimizing backend performance, and deploying cloud-native applications. Experienced in Agile/Scrum methodologies, CI/CD pipelines, and delivering secure, HIPAA-compliant solutions. Strong focus on performance, accessibility, and collaboration across cross-functional teams.",
+    "experience": [
+        {
+            "company": "United Healthcare",
+            "location": "New York, NY",
+            "title": "Full Stack Developer",
+            "startDate": "Sept 2024",
+            "endDate": "Present",
+            "responsibilities": [
+                "Designed and developed responsive web applications with ReactJS, Redux, TypeScript, and Spring Boot backend APIs.",
+                "Created reusable React components and hooks to accelerate development and ensure consistency across modules.",
+                "Built secure RESTful APIs in Java, integrating patient, claims, and coverage data with backend systems.",
+                "Implemented role-based authentication and authorization using Spring Security and JWT.",
+                "Collaborated with UI/UX teams to ensure compliance with WCAG 2.1 accessibility standards and HIPAA regulations.",
+                "Improved application performance by reducing page load time by 30% using React performance optimizations."
+            ],
+            "technologies": [
+                "Java",
+                "Spring Boot",
+                "ReactJS",
+                "Redux",
+                "TypeScript",
+                "REST APIs",
+                "SQL",
+                "Git",
+                "Agile/Scrum"
+            ]
+        },
+        {
+            "company": "Nimble Clinical Research",
+            "location": "New Jersey (Remote)",
+            "title": "Full Stack Developer",
+            "startDate": "Mar 2022",
+            "endDate": "Aug 2022",
+            "responsibilities": [
+                "Developed front-end features using ReactJS, Redux, and TypeScript, ensuring a responsive and modern UI.",
+                "Built backend services with Java Spring Boot, managing clinical research workflows and task automation.",
+                "Integrated Zoho APIs for CRM and workflow automation, reducing manual effort by 25%.",
+                "Customized and enhanced Shopify themes using Liquid, HTML5, and CSS3 to meet branding requirements.",
+                "Created interactive dashboards with Material UI and Bootstrap for better research data visualization.",
+                "Designed GraphQL APIs for optimized querying of clinical data.",
+                "Implemented RESTful services for backend data integration with third-party applications.",
+                "Enhanced security with Spring Security, validating sensitive research data access.",
+                "Wrote unit and integration tests using JUnit, Mockito, and Jest to ensure high code coverage.",
+                "Collaborated with remote teams using Agile methodologies and tools like Jira and Confluence.",
+                "Deployed services on AWS cloud, ensuring high availability and scalability."
+            ],
+            "technologies": [
+                "ReactJS",
+                "Redux",
+                "TypeScript",
+                "Java",
+                "Spring Boot",
+                "Zoho APIs",
+                "Liquid",
+                "HTML5",
+                "CSS3",
+                "Material UI",
+                "Bootstrap",
+                "GraphQL",
+                "RESTful services",
+                "Spring Security",
+                "JUnit",
+                "Mockito",
+                "Jest",
+                "Jira",
+                "Confluence",
+                "AWS cloud"
+            ]
+        },
+        {
+            "company": "Pegotec Pte. Ltd.",
+            "location": "Singapore City (Remote)",
+            "title": "Full Stack Developer",
+            "startDate": "Oct 2021",
+            "endDate": "Feb 2022",
+            "responsibilities": [
+                "Built and deployed 5+ web applications using ReactJS (frontend) and Node.js/MongoDB (backend).",
+                "Migrated legacy applications to ReactJS class components, ensuring long-term maintainability.",
+                "Designed and implemented real-time dashboards with live maps and data streams for client monitoring.",
+                "Optimized MongoDB queries and indexes to enhance system performance and scalability.",
+                "Deployed applications on AWS EC2 and S3 with Docker containers for CI/CD.",
+                "Implemented user authentication and authorization using JWT and OAuth 2.0."
+            ],
+            "technologies": [
+                "Node.js",
+                "ReactJS",
+                "Redux",
+                "MongoDB",
+                "SQL Server",
+                "AWS",
+                "Docker",
+                "Ant Design",
+                "REST APIs"
+            ]
+        },
+        {
+            "company": "Cedar Gate Technologies",
+            "location": "Connecticut, USA",
+            "title": "Full Stack Developer",
+            "startDate": "Jan 2019",
+            "endDate": "Sept 2021",
+            "responsibilities": [
+                "Designed healthcare analytics dashboards using ReactJS for UI and Node.js for backend services.",
+                "Built data visualization modules to track value-based care metrics and population health insights.",
+                "Developed Node.js REST APIs for data ingestion from enterprise healthcare systems.",
+                "Optimized SQL queries and backend pipelines, improving large-scale dataset processing by 30%.",
+                "Integrated APIs with payment adjudication systems for bundled payments and claims processing.",
+                "Migrated monolithic applications into modular microservices with Node.js and Express."
+            ],
+            "technologies": [
+                "Node.js",
+                "ReactJS",
+                "SQL",
+                "Git",
+                "Docker",
+                "Healthcare Analytics",
+                "Payment Adjudication APIs"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "university": "Monroe University",
+            "location": "New York",
+            "graduationDate": "Aug 2024",
+            "degree": "Masters in Computer Science",
+            "gpa": "3.92"
+        },
+        {
+            "university": "Tribhuvan University",
+            "location": "Kathmandu",
+            "graduationDate": "Oct 2020",
+            "degree": "Bachelors in Computer Science",
+            "percentage": "73%"
+        }
+    ],
+    "certifications": [
+        {
+            "name": "Object-Oriented Programming with Java – Part 1",
+            "issuer": "University of Helsinki",
+            "date": "September 12, 2019"
+        },
+        {
+            "name": "Object-Oriented Programming with Java – Part 2",
+            "issuer": "University of Helsinki",
+            "date": "October 17, 2019"
+        }
+    ],
+    "projects": [
+        {
+            "name": "Lodgenest",
+            "url": "https://lodgenest.netlify.app/",
+            "description": [
+                "Developed a web-based property management platform for seamless apartment search and bookings (ReactJS, TypeScript, NodeJS, AntDesign, Axios).",
+                "Built secure user authentication and role-based access control.",
+                "Implemented a real-time messaging system, and designed database schemas and use cases."
+            ]
+        }
+    ],
+    "skills": {
+        "frontEnd": [
+            {
+                "skill": "ReactJS",
+                "description": "A JavaScript library for building user interfaces.",
+                "usage": "Developed and maintained responsive, accessible web applications and commercial-grade websites."
+            },
+            {
+                "skill": "JavaScript",
+                "description": "A high-level programming language that is one of the core technologies of the World Wide Web.",
+                "usage": "Used across roles for front-end development and creating interactive UI components."
+            },
+            {
+                "skill": "TypeScript",
+                "description": "A strict syntactical superset of JavaScript that adds optional static typing.",
+                "usage": "Built property management platform and maintained web applications."
+            },
+            {
+                "skill": "Redux",
+                "description": "A predictable state container for JavaScript apps.",
+                "usage": "Used for state management in applications ensuring consistent data flow."
+            },
+            {
+                "skill": "Thunk/Saga",
+                "description": "Middleware for Redux to handle asynchronous actions."
+            },
+            {
+                "skill": "HTML5",
+                "description": "The standard markup language for documents designed to be displayed in a web browser."
+            },
+            {
+                "skill": "CSS3",
+                "description": "A stylesheet language used for describing the presentation of a document written in a markup language like HTML."
+            },
+            {
+                "skill": "Material UI",
+                "description": "A popular React UI framework that implements Google's Material Design.",
+                "usage": "Implemented data visualizations and interactive UI components."
+            },
+            {
+                "skill": "Ant Design",
+                "description": "A React UI library with a set of high-quality components and demos for building rich, interactive user interfaces.",
+                "usage": "Used for property management platform and interactive admin dashboards."
+            },
+            {
+                "skill": "Bootstrap",
+                "description": "A popular CSS framework directed at responsive, mobile-first front-end web development.",
+                "usage": "Ensured responsive design and implemented UI components."
+            },
+            {
+                "skill": "WCAG",
+                "description": "Web Content Accessibility Guidelines for making web content more accessible to people with disabilities."
+            }
+        ],
+        "backEnd": [
+            {
+                "skill": "Java",
+                "description": "A high-level, class-based, object-oriented programming language."
+            },
+            {
+                "skill": "Spring Boot",
+                "description": "An open-source, microservice-based Java web framework."
+            },
+            {
+                "skill": "Node.js",
+                "description": "A back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser.",
+                "usage": "Built and deployed websites and developed REST APIs."
+            },
+            {
+                "skill": "ExpressJS",
+                "description": "A back-end web application framework for Node.js, designed for building web applications and APIs."
+            },
+            {
+                "skill": "REST APIs",
+                "description": "An architectural style for providing standards between computer systems on the web.",
+                "usage": "Integrated for real-time data delivery and built custom APIs."
+            },
+            {
+                "skill": "Firebase",
+                "description": "A platform developed by Google for creating mobile and web applications.",
+                "usage": "Built dynamic apps including authentication systems."
+            },
+            {
+                "skill": "MongoDB",
+                "description": "A source-available cross-platform document-oriented database program.",
+                "usage": "Used as database for commercial-grade websites."
+            },
+            {
+                "skill": "SQL",
+                "description": "A standard language for storing, manipulating and retrieving data in databases.",
+                "usage": "Optimized schemas and boosted query performance."
+            },
+            {
+                "skill": "SQL Server",
+                "description": "A relational database management system developed by Microsoft."
+            },
+            {
+                "skill": "GraphQL",
+                "description": "A query language for APIs and a runtime for fulfilling those queries with your existing data.",
+                "usage": "Implemented for interactive UI components."
+            },
+            {
+                "skill": "Spring Security",
+                "description": "A framework that provides authentication, authorization, and other security features for enterprise applications."
+            },
+            {
+                "skill": "JWT",
+                "description": "JSON Web Token is a compact, URL-safe means of representing claims to be transferred between two parties."
+            },
+            {
+                "skill": "OAuth 2.0",
+                "description": "An authorization framework that enables applications to obtain limited access to user accounts on an HTTP service."
+            }
+        ],
+        "devOpsAndTools": [
+            {
+                "skill": "Git (GitHub, GitLab)",
+                "description": "A distributed version control system for tracking changes in source code during software development.",
+                "usage": "Managed workflows, resolved conflicts, and supported collaboration."
+            },
+            {
+                "skill": "Jenkins",
+                "description": "An open source automation server which enables developers to reliably build, test, and deploy their software."
+            },
+            {
+                "skill": "Docker",
+                "description": "A set of platform as a service products that use OS-level virtualization to deliver software in packages called containers.",
+                "usage": "Led deployments and managed environments."
+            },
+            {
+                "skill": "Heroku",
+                "description": "A cloud platform as a service supporting several programming languages."
+            },
+            {
+                "skill": "AWS",
+                "description": "A subsidiary of Amazon providing on-demand cloud computing platforms and APIs.",
+                "usage": "Managed environments ensuring CI/CD and uptime."
+            },
+            {
+                "skill": "Zoho",
+                "description": "A suite of business management software and SaaS applications.",
+                "usage": "Integrated APIs for workflow automation."
+            },
+            {
+                "skill": "Shopify",
+                "description": "An e-commerce platform for online stores and retail point-of-sale systems.",
+                "usage": "Developed and customized responsive themes."
+            },
+            {
+                "skill": "Jira",
+                "description": "A proprietary issue tracking product developed by Atlassian that allows bug tracking and agile project management."
+            },
+            {
+                "skill": "Confluence",
+                "description": "A web-based corporate wiki (collaboration software) developed by Atlassian."
+            },
+            {
+                "skill": "Postman",
+                "description": "An API platform for building and using APIs."
+            },
+            {
+                "skill": "JUnit",
+                "description": "A unit testing framework for the Java programming language."
+            },
+            {
+                "skill": "Mockito",
+                "description": "An open source testing framework for Java."
+            },
+            {
+                "skill": "Jest",
+                "description": "A JavaScript testing framework with a focus on simplicity."
+            },
+            {
+                "skill": "Mocha",
+                "description": "A feature-rich JavaScript test framework running on Node.js and in the browser."
+            },
+            {
+                "skill": "Chai",
+                "description": "A BDD / TDD assertion library for node and the browser that can be delightfully paired with any javascript testing framework."
+            }
+        ],
+        "other": [
+            {
+                "skill": "UI/UX Design (Figma)",
+                "description": "The process of designing user interfaces for machines and software, with a focus on maximizing usability and the user experience."
+            },
+            {
+                "skill": "WordPress",
+                "description": "A free and open-source content management system.",
+                "usage": "Designed flexible sites with PHP-backed dashboards."
+            },
+            {
+                "skill": "Liquid",
+                "description": "An open-source template language created by Shopify and written in Ruby.",
+                "usage": "Customized Shopify themes."
+            },
+            {
+                "skill": "CI/CD pipelines",
+                "description": "A series of steps that must be performed in order to deliver a new version of software.",
+                "usage": "Managed AWS environments ensuring seamless delivery."
+            },
+            {
+                "skill": "Agile/Scrum",
+                "description": "A framework for project management that emphasizes teamwork, accountability and iterative progress toward a well-defined goal."
+            },
+            {
+                "skill": "HIPAA",
+                "description": "The Health Insurance Portability and Accountability Act, a US federal law that required the creation of national standards to protect sensitive patient health information."
+            }
+        ]
+    }
+}
