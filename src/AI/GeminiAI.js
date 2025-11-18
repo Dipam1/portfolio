@@ -2,7 +2,6 @@ import { GoogleGenAI, Type } from "@google/genai";
 import deepum from "../Assets/info.json";
 
 
-console.log(process.env);
 const ai = new GoogleGenAI({ apiKey: process.env.REACT_APP_GEMINI_API_KEY });
 
 const schema = {
@@ -16,7 +15,6 @@ const schema = {
 
 export const respondAsDipam = async (query) => {
     try {
-        console.log(JSON.stringify(deepum))
         const prompt = `
             Answer the following query based on the info provided below. 
             Query: ${query}
@@ -40,7 +38,6 @@ export const respondAsDipam = async (query) => {
 
         const resultText = response.text.trim();
         const resultJson = JSON.parse(resultText);
-        console.log(resultJson)
         return resultJson;
     } catch (error) {
         console.error("Error", error);
