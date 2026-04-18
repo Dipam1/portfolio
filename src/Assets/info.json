@@ -19,7 +19,7 @@
             "Swimming"
         ]
     },
-    "professionalSummary": "Full Stack Developer with 5+ years of hands-on experience in developing scalable enterprise applications and healthcare solutions using Java (Spring Boot), ReactJS, Node.js, Redux, and SQL/NoSQL databases. Skilled in designing responsive UIs, integrating REST/GraphQL APIs, optimizing backend performance, and deploying cloud-native applications. Experienced in Agile/Scrum methodologies, CI/CD pipelines, and delivering secure, HIPAA-compliant solutions. Strong focus on performance, accessibility, and collaboration across cross-functional teams.",
+    "professionalSummary": "Full Stack Developer with 6+ years of hands-on experience in developing scalable enterprise applications and healthcare solutions using Next.js, Java (Spring Boot), ReactJS, Node.js, Redux, and SQL/NoSQL databases. Skilled in designing responsive UIs, integrating REST/GraphQL APIs, optimizing backend performance, and deploying cloud-native applications. Experienced in Agile/Scrum methodologies, CI/CD pipelines, and delivering secure, HIPAA-compliant solutions. Strong focus on performance, accessibility, and collaboration across cross-functional teams.",
     "experience": [
         {
             "company": "United Healthcare",
@@ -33,12 +33,14 @@
                 "Built secure RESTful APIs in Java, integrating patient, claims, and coverage data with backend systems.",
                 "Implemented role-based authentication and authorization using Spring Security and JWT.",
                 "Collaborated with UI/UX teams to ensure compliance with WCAG 2.1 accessibility standards and HIPAA regulations.",
-                "Improved application performance by reducing page load time by 30% using React performance optimizations."
+                "Improved application performance by reducing page load time by 30% using React performance optimizations.",
+                "Leveraged LLMs to design and integrate conversational chat agents, improving user engagement and support workflows."
             ],
             "technologies": [
                 "Java",
                 "Spring Boot",
                 "ReactJS",
+                "Next.js",
                 "Redux",
                 "TypeScript",
                 "REST APIs",
@@ -52,7 +54,7 @@
             "location": "New Jersey (Remote)",
             "title": "Full Stack Developer",
             "startDate": "Mar 2022",
-            "endDate": "Aug 2022",
+            "endDate": "Aug 2023",
             "responsibilities": [
                 "Developed front-end features using ReactJS, Redux, and TypeScript, ensuring a responsive and modern UI.",
                 "Built backend services with Java Spring Boot, managing clinical research workflows and task automation.",
@@ -64,12 +66,14 @@
                 "Enhanced security with Spring Security, validating sensitive research data access.",
                 "Wrote unit and integration tests using JUnit, Mockito, and Jest to ensure high code coverage.",
                 "Collaborated with remote teams using Agile methodologies and tools like Jira and Confluence.",
-                "Deployed services on AWS cloud, ensuring high availability and scalability."
+                "Deployed services on AWS cloud, ensuring high availability and scalability.",
+                "Utilized LLMs and machine learning techniques to automate customer support workflows, reducing response times and improving user satisfaction."
             ],
             "technologies": [
                 "ReactJS",
                 "Redux",
                 "TypeScript",
+                "Node.js",
                 "Java",
                 "Spring Boot",
                 "Zoho APIs",
@@ -158,6 +162,11 @@
     ],
     "certifications": [
         {
+            "name": "AWS Cloud Practitioner",
+            "issuer": "Amazon Web Services",
+            "date": "August 2025"
+        },
+        {
             "name": "Object-Oriented Programming with Java – Part 1",
             "issuer": "University of Helsinki",
             "date": "September 12, 2019"
@@ -181,6 +190,11 @@
     ],
     "skills": {
         "frontEnd": [
+            {
+                "skill": "Next.js",
+                "description": "A React framework for building full-stack web applications.",
+                "usage": "Used for building scalable enterprise and healthcare applications."
+            },
             {
                 "skill": "ReactJS",
                 "description": "A JavaScript library for building user interfaces.",
@@ -257,9 +271,14 @@
                 "usage": "Integrated for real-time data delivery and built custom APIs."
             },
             {
-                "skill": "Firebase",
-                "description": "A platform developed by Google for creating mobile and web applications.",
-                "usage": "Built dynamic apps including authentication systems."
+                "skill": "GraphQL",
+                "description": "A query language for APIs and a runtime for fulfilling those queries with your existing data.",
+                "usage": "Implemented for interactive UI components."
+            },
+            {
+                "skill": "PostgreSQL",
+                "description": "A powerful, open source object-relational database system.",
+                "usage": "Used for robust, reliable data storage and complex querying."
             },
             {
                 "skill": "MongoDB",
@@ -276,9 +295,9 @@
                 "description": "A relational database management system developed by Microsoft."
             },
             {
-                "skill": "GraphQL",
-                "description": "A query language for APIs and a runtime for fulfilling those queries with your existing data.",
-                "usage": "Implemented for interactive UI components."
+                "skill": "Firebase",
+                "description": "A platform developed by Google for creating mobile and web applications.",
+                "usage": "Built dynamic apps including authentication systems."
             },
             {
                 "skill": "Spring Security",
@@ -361,6 +380,11 @@
             }
         ],
         "other": [
+            {
+                "skill": "LLM Integration",
+                "description": "Integration of Large Language Models into applications.",
+                "usage": "Leveraged to build conversational chat agents and automate customer support workflows."
+            },
             {
                 "skill": "UI/UX Design (Figma)",
                 "description": "The process of designing user interfaces for machines and software, with a focus on maximizing usability and the user experience."
